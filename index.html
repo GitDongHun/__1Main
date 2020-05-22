@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>KD - 메인페이지</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body {
+            font-family: Roboto;
+            margin: 0;
+            padding: 0;
+            //background-image:url('https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/2mfT/image/1sabW2wj-McG3Ixa8AKBRSH8wSk.jpg');
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            background-color: #0F4C81;
+        }
+
+        .nav-name {
+            white-space: nowrap;
+            color: aqua;
+            padding-left: 10px;
+            font-size: 1.75rem;
+        }
+
+        .nav-name:hover {
+            background-color: gray;
+        }
+
+        .nav-right {
+            display: flex;
+            list-style-type: none;
+            color: white !important;
+
+        }
+
+        .nav-right-item {
+            margin-left: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .nav-right-item:nth-child(1) {
+            background-color: lightseagreen;
+        }
+
+        .nav-right-item:hover {
+            background-color: gray;
+        }
+
+        .main {
+            background-color: #101010;
+            margin: 0 auto;
+            margin-top: 70px;
+            color: Gainsboro;
+            height: 300px;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .main-sub {
+            font-size: 1.25rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* _down 블록 추가*/
+
+        ._down-sub1 {
+            background-color: RED;
+        }
+
+        ._down-sub2 {
+            background-color: GREEN;
+        }
+
+        ._down-sub3 {
+            background-color: YELLOW;
+        }
+
+        ._down-sub4 {
+            background-color: PURPLE;
+        }
+
+        ._down-sub5 {
+            background-color: GREY;
+        }
+
+        ._down-sub6 {
+            background-color: RGB(100, 200, 50);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-name">
+            사물인터넷 웹페이지
+
+        </div>
+        <ul class="nav-right">
+            <li class="nav-right-item"><a href="index.html">홈</a></li>
+            <li>|</li>
+            <li class="nav-right-item"><a href="/use/_use.html">프로그램 사용하기</a></li>
+            <li>|</li>
+            <li class="nav-right-item"><a href="/use/_admininfo.html">개발자 정보</a></li>
+            <li>|</li>
+            <li class="nav-right-item"><a href="login.html">로그인</a></li>
+        </ul>
+
+    </nav>
+    <div class="main">
+        <div class="main-title">
+            IoT
+        </div>
+        <div class="main-sub">
+            <p>사물과 대화하는 세상</p>
+            <p>무료 서비스 기술</p>
+            <p>In Everywhere</p>
+        </div>
+    </div>
+    <!------------아래 공간 시작-------->
+    <div class="_down">
+        <div class="_down-sub1">
+            IoT 소개
+            <p>
+                우리 현준이 내용 넣어야 할 부분
+            </p>
+        </div>
+        <div class="_down-sub2">
+            팀 소개
+            <p>
+                우리 현준이 내용 넣어야 할 부분
+            </p>
+        </div>
+        <div class="_down-sub3">
+            프로젝트 소개
+            <p>
+                우리 현준이 내용 넣어야 할 부분
+            </p>
+        </div>
+        <div class="_down-sub4">
+            제품 소개
+            <p>
+                우리 현준이 내용 넣어야 할 부분
+            </p>
+        </div>
+        <div class="_down-sub5">
+            사용처
+            <p>
+                우리 현준이 내용 넣어야 할 부분
+            </p>
+        </div>
+        <div class="_down-sub6">
+            ^^
+            개발자 소개
+        </div>
+    </div>
+
+    <!------------아래 공간 끝----------->
+</body>
+
+</html>

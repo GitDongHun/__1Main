@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>KD - 메인페이지</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body {
+            font-family: Roboto;
+            margin: 0;
+            padding: 0;
+            //background-image:url('https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/2mfT/image/1sabW2wj-McG3Ixa8AKBRSH8wSk.jpg');
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            background-color: #0F4C81;
+        }
+
+        .nav-name {
+            white-space: nowrap;
+            color: aqua;
+            padding-left: 10px;
+            font-size: 1.75rem;
+        }
+
+        .nav-name:hover {
+            background-color: gray;
+        }
+
+        .nav-right {
+            display: flex;
+            list-style-type: none;
+            color: white !important;
+
+        }
+
+        .nav-right-item {
+            margin-left: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .nav-right-item:nth-child(1) {
+            background-color: lightseagreen;
+        }
+
+        .nav-right-item:hover {
+            background-color: gray;
+        }
+
+        .down {
+            margin-top: 70px;
+        }
+
+        ._down-sub1 {
+            background-color: RED;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-name">
+            사물인터넷 웹페이지
+
+        </div>
+        <ul class="nav-right">
+            <li class="nav-right-item"><a href="../index.html">홈</a></li>
+            <li>|</li>
+            <li class="nav-right-item"><a href="_use.html">프로그램 사용하기</a></li>
+            <li>|</li>
+            <li class="nav-right-item"><a href="_admininfo.html">개발자 정보</a></li>
+            <li>|</li>
+            <li class="nav-right-item"><a href="../login.html">로그인</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="_down">
+        <div class="_down-sub1">
+            개발자 정보
+            <p>
+
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
