@@ -10,15 +10,14 @@ https://1main.repofkordhk.repl.co/_testFolder_/_vuetest.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- 목록 이미지 사용하기 위함-->
+		<!-- 목록 이미지 사용하기 위함-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>뷰 기초익히기</title>
     <!-- 1학습목적 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- 2프로덕션(실제 사용) 목적
+		<!-- 2프로덕션(실제 사용) 목적
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
 		-->
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
         body {
             font-family: Roboto;
@@ -33,8 +32,7 @@ https://1main.repofkordhk.repl.co/_testFolder_/_vuetest.html
             // 출처: https://ingryong.tistory.com/4 [잉룡의 블로그]
             // background-image:url('https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/2mfT/image/1sabW2wj-McG3Ixa8AKBRSH8wSk.jpg');
         }
-
-        /* 상단바 전체*/
+				/* 상단바 전체*/
         .nav {
             position: fixed;
             top: 0;
@@ -47,8 +45,7 @@ https://1main.repofkordhk.repl.co/_testFolder_/_vuetest.html
             list-style: none;
             box-sizing: border-box;
         }
-
-        /* 상단바 로고*/
+				/* 상단바 로고*/
         .nav-logo {
             color: white;
             font-size: 35px;
@@ -56,94 +53,82 @@ https://1main.repofkordhk.repl.co/_testFolder_/_vuetest.html
             padding: 0 0px;
             font-weight: bold;
         }
-
-        /* 상단바 로고 마우스올림*/
+				/* 상단바 로고 마우스올림*/
         .nav-logo:hover {
             background-color: #1b9bff;
         }
-
-        /* 상단바 목록 시작*/
+				/* 상단바 목록 시작*/
         .nav ul {
             float: right;
-            margin-top: 0;
+						margin-top:0;
             margin-right: 20px;
         }
-
-        /* 상단바 목록 하위메뉴*/
+				/* 상단바 목록 하위메뉴*/
         .nav ul li {
             display: inline-block;
             line-height: 80px;
             margin: 0 5px;
         }
-
-        /* 상단바 목록 하위메뉴 링크*/
+			/* 상단바 목록 하위메뉴 링크*/
         .nav ul li a {
-            color: whilte;
+            color: white;
             font-size: 17px;
             text-transform: uppercase;
             padding: 7px 13px;
             border-radius: 3px;
         }
 
-        /*링크 디자인*/
+			/*링크 디자인*/
         a.active,
         a:hover {
             background: #1b9bff;
             transitions: 0.5s;
         }
+				/* 상단바 사이즈 줄였을때 나오는 목록버튼*/
+				.checkbtn{
+					font-size:30px;
+					color: white;
+					float:right;
+					line-height:70px;
+					margin-right:40px;
+					cursor:pointer;
+					display:none;
+				}
+				#check{
+					display:none;
+				}
+			/*상단바 사이즈 줄이면 하는이벤트*/
+				@media(max-width:858px){
+					.checkbtn{
+						display:block;
+					}
+					ul{
+						position:fixed;
+						width:100%;
+						height:100%;
+						background:#2c3e50;
+						top:70px;
+						left:-200%;
+						text-align:center;
+						transition: all .5s;
+					}
+					.nav ul li{
+						display:block;
+						margin:50px 0;
+						line-height:30px;
+					}
+					.nav ul li a{
+						font-size:20px;
+					}
+					a:hover,a.active{
+						background:none;
+						color:#0082e6
+					}
+					#check:checked ~ ul{
+						left:0;
+					}
 
-        /* 상단바 사이즈 줄였을때 나오는 목록버튼*/
-        .checkbtn {
-            font-size: 30px;
-            color: white;
-            float: right;
-            line-height: 70px;
-            margin-right: 40px;
-            cursor: pointer;
-            display: none;
-        }
-
-        #check {
-            display: none;
-        }
-
-        /*상단바 사이즈 줄이면 하는이벤트*/
-        @media(max-width:858px) {
-            .checkbtn {
-                display: block;
-            }
-
-            ul {
-                position: fixed;
-                width: 100%;
-                height: 10vh;
-                background: #2c3e50;
-                top: 70px;
-                left: -200%;
-                text-align: center;
-                transition: all .5s;
-            }
-
-            nav ul li {
-                display: block;
-                margin: 50px 0;
-                line-height: 30px;
-            }
-
-            nav ul li a {
-                font-size: 20px;
-            }
-
-            a:hover,
-            a.active {
-                background: none;
-                color: #0082e6
-            }
-
-            #check:checked~ul {
-                left: 0;
-            }
-        }
+				}
 
         .main {
             background-color: #101010;
@@ -181,4 +166,125 @@ https://1main.repofkordhk.repl.co/_testFolder_/_vuetest.html
             background-color: #101010;
         }
 
-        .su
+        .sub-item {
+            background-color: #e0e0e0;
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .sub-item-title {
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.03);
+            text-align: center;
+            height: 53px;
+            line-height: 53px;
+            border-bottom: 1px solid black;
+        }
+
+        .sub-item-sub {
+            float: left;
+            margin: 10px;
+            z-index: 1;
+        }
+
+        .sub-item-sub-button {
+            color: skyblue;
+            background-color: rgba(255, 255, 255, 255); // 흰색
+            border: 1px solid skyblue;
+            padding: 7px 100px;
+            // 버튼 디자인 아래쪽 가운데 가게끔 알아보기.
+        }
+    </style>
+</head>
+<!-- 바디 ------------------------------------------------------------->
+<body>
+    <nav class="nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="nav-logo">
+            <img src="/image/logo/logo_transparent_wide.png" alt="MegaBrain_Logo" width="230" height="60">
+        </label>
+        <ul>
+            <li>
+                <a class="active" href="index.html">홈</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/use/_use.html">프로그램 사용하기</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="/use/_admininfo.html">개발자 정보</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="login.html">로그인</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="main-title">
+            IoT
+        </div>
+        <div class="main-sub">
+            <p>스마트한 기술 스마트한 우리</p>
+            <p>사물 인터넷으로 만들어가는 미래</p>
+            <p>MegaBrain IoT
+            </p>
+        </div>
+    </div>
+    <!------------아래 공간 시작-------->
+    <!--- main 안에 넣고 아래에 표시 --->
+    <div class="sub">
+        <div class="sub-item">
+            <div class="sub-item-title">
+                <a href="1_home.html">가정용</a>
+            </div>
+            <div class="sub-item-sub">
+                <a href="/use/_myhome.html"><input type="button" class="sub-item-sub-button" value="바로가기" /></a>
+            </div>
+        </div>
+        <div class="sub-item">
+            <div class="sub-item-title">
+                <a href="2_industrial.html">사무용</a>
+            </div>
+            <div class="sub-item-sub">
+                <input type="button" class="sub-item-sub-button" value="바로가기" />
+            </div>
+        </div>
+        <div class="sub-item">
+            <div class="sub-item-title">
+                <a href="3_server_setting.html">공장용</a>
+            </div>
+            <div class="sub-item-sub">
+                <input type="button" class="sub-item-sub-button" value="바로가기" />
+            </div>
+        </div>
+    </div>
+    <!--- main 안에 넣고 여기 위에 표시 --->
+    <div class="_down">
+        <div class="_down-sub1"></div>
+        <div class="_down-sub2">
+            IoT 소개
+            <p>
+                MegaBrain 팀의 IoT 플랫폼은 더욱 빨라지는 인터넷 시대에 맞춰 Global표준을 준수하여 다른 플랫폼과의 호환성을 확보하며 가정, 산업, 사무에 기술을 확대 적용하여 고객들이 원하는 서비스를 제공하고 있습니다.
+            </p>
+        </div>
+        <div class="_down-sub3">
+            Main Functions
+            <p></p>
+            <div class=""></div>
+        </div>
+    </div>
+    <!------------아래 공간 끝----------->
+</body>
+
+</html>
